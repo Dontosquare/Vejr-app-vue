@@ -1,9 +1,11 @@
 <script setup> 
 import { ref } from 'vue';
+const message = ref('Frontend projekt vejr app');
 </script>
 
 <template>
   <header>
-    <h1>Frontend projekt vejr app</h1>
+    <input v-model="message" />
+    <p>{{ message }}</p>
   </header>
 </template>
