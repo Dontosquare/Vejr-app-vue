@@ -1,7 +1,17 @@
 
 
+body {
+
+background: #ffffff;
+background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(45, 156, 253, 1) 100%);
+background-repeat: no-repeat;
+background-size: auto 600px;
+}
+
 Header {
     display: flex;
+    color: #ffffff;
     justify-content: center;
     font-family: "roboto";
 }
+
