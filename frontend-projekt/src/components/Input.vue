@@ -17,3 +17,8 @@ const onSubmitForm = () => {
         <button type="submit">Søg</button>
     </form>
 </template>
+
+
+<style scoped>
+
+</style>
