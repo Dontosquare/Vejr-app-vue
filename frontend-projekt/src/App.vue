@@ -6,8 +6,8 @@ import { ref } from 'vue';
 const result = ref(null)
 
 
-const apiKey = '73d60521ff71fd2cf36e01d86667d70d';
-const city = ref('');
+const apiKey = import.meta.env.TOKEN;
+let city = ref('');
 
 
 const fetchWeather = async (e) => {
@@ -31,7 +31,7 @@ const fetchWeather = async (e) => {
 <template>
   <Header></Header>
   <hr />
-  <form v-on:submit.prevent="onSubmitForm">
+  <form id="app">
         <input v-model="city" v-on:keypress="fetchWeather" placeholder="Indtast by" />
         <button type="submit">Søg</button>
     </form>
