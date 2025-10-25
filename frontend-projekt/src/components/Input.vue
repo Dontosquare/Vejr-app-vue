@@ -1,24 +1,19 @@
 <script setup>
 import { ref } from 'vue';
 
-const soegefterby = ref('');
 
-const onSubmitForm = () => {
-    console.log(soegefterby.value);
-    todoList.value.push(soegefterby.value);
-    soegefterby.value = '';
-    console.table(soegefterby.value);
-};
+const query = ref('');
+
+
+
 </script>
 
 <template>
     <form v-on:submit.prevent="onSubmitForm">
-        <input v-model="soegefterby" placeholder="Indtast by" />
+        <input v-model="city" v-on:keypress="fetchWeather" placeholder="Indtast by" />
         <button type="submit">Søg</button>
     </form>
 </template>
 
 
-<style scoped>
-
-</style>
+<style scoped></style>
