@@ -15,3 +15,31 @@ Header {
     font-family: "roboto";
 }
 
+input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;  
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: "roboto";
+    margin-top: 40px;  
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}

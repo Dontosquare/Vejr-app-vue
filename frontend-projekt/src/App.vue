@@ -6,25 +6,19 @@ import { ref } from 'vue';
 const result = ref(null)
 
 
-const apiKey = import.meta.env.TOKEN;
-let city = ref('');
+const apiKey = import.meta.env.VITE_API_KEY;
+const city = ref('');
 
 
-const fetchWeather = async (e) => {
-  if (e.key == 'Enter') {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=da`;
 
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data);
-      result.value = data;
-    } catch (error) {
-      console.error('Fejl i søgning:', error);
+const fetchWeather = async (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric&lang=da`);
+        result.value = await response.json();
+        console.log(result.value);
     }
-  }
 };
-
 
 </script>
 
@@ -33,7 +27,7 @@ const fetchWeather = async (e) => {
   <hr />
   <form id="app">
         <input v-model="city" v-on:keypress="fetchWeather" placeholder="Indtast by" />
-        <button type="submit">Søg</button>
+        <button type="submit" >Søg</button>
     </form>
 </template>
 
