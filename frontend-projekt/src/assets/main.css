@@ -36,10 +36,26 @@ button {
     justify-content: center;
     align-items: center;
     margin: auto;
+    background-color: #ffffff;
     font-family: "roboto";
     margin-top: 40px;  
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+}
+
+h2 {
+    color: navy;
+    font-size: 50px;
+    font-family: "roboto";
+    text-align: center;
+    margin-top: 100px;
+}
+
+p {
+    color: #000080;
+    font-size: 30px;
+    font-family: "roboto";
+    text-align: center;
 }
